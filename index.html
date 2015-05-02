@@ -1,1 +1,662 @@
-Hi!
+
+<!DOCTYPE html>
+<!-- 
+#              _ _         _   _                   
+#    /\  /\___| | | ___   | |_| |__   ___ _ __ ___ 
+#   / /_/ / _ \ | |/ _ \  | __| '_ \ / _ \ '__/ _ \
+#  / __  /  __/ | | (_) | | |_| | | |  __/ | |  __/
+#  \/ /_/ \___|_|_|\___/   \__|_| |_|\___|_|  \___|
+#     
+#
+#  Hi. If you're using this to evaluate the quality of my work, don't.
+#  I used a template because efficiency.
+#
+#  jlear2013@my.fit.edu
+# 
+#
+-->
+<html>
+  <head>
+    <meta name="viewport" content="width=375, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>Josh Lear - Resume</title>
+    <script type="text/javascript" src="/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="/js/underscore-min.js"></script>
+    <style>
+
+@font-face {
+    font-family: 'Lato Regular';
+    src: url('/fonts/lato/lato-regular-webfont.eot');
+    src: url('/fonts/lato/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/lato/lato-regular-webfont.woff2') format('woff2'),
+         url('/fonts/lato/lato-regular-webfont.woff') format('woff'),
+         url('/fonts/lato/lato-regular-webfont.ttf') format('truetype'),
+         url('/fonts/lato/lato-regular-webfont.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato Light';
+    src: url('/fonts/lato/lato-light-webfont.eot');
+    src: url('/fonts/lato/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/lato/lato-light-webfont.woff2') format('woff2'),
+         url('/fonts/lato/lato-light-webfont.woff') format('woff'),
+         url('/fonts/lato/lato-light-webfont.ttf') format('truetype'),
+         url('/fonts/lato/lato-light-webfont.svg#latolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Lato Light Italic';
+    src: url('/fonts/lato/lato-lightitalic-webfont.eot');
+    src: url('/fonts/lato/lato-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/lato/lato-lightitalic-webfont.woff2') format('woff2'),
+         url('/fonts/lato/lato-lightitalic-webfont.woff') format('woff'),
+         url('/fonts/lato/lato-lightitalic-webfont.ttf') format('truetype'),
+         url('/fonts/lato/lato-lightitalic-webfont.svg#latolight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato Heavy';
+    src: url('/fonts/lato/lato-heavy-webfont.eot');
+    src: url('/fonts/lato/lato-heavy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/lato/lato-heavy-webfont.woff2') format('woff2'),
+         url('/fonts/lato/lato-heavy-webfont.woff') format('woff'),
+         url('/fonts/lato/lato-heavy-webfont.ttf') format('truetype'),
+         url('/fonts/lato/lato-heavy-webfont.svg#latoheavy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {
+  height: 100%;
+  margin: 0px;
+  font-family: "Lato Light", serif;
+  font-size: 16px;
+  color: #000;
+  line-height: 20px;
+   -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+
+a {
+  color: #878787;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #878787;
+}
+
+.col1 {
+  position: fixed;
+  width: 30%;
+  z-index: -1;
+  height: 100%;
+  max-width: 700px;
+  vertical-align: top;
+  box-shadow: 0px 0px 20px 2px #777;
+
+  background-image: url(me.jpg);;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center center;
+  background-attachment: cover;
+}
+
+.col2 {
+  float: right;
+  width: 70%;
+  z-index: 2;
+  text-align: left;
+  vertical-align: top;
+  box-shadow: 0px 0px 20px 7px #373737;
+}
+
+.col2 .inner {
+  position: relative;
+  padding-left: 5%;
+  padding-right: 6%;
+  padding-top: 2.5%;
+}
+
+.inner .table-cell {
+  padding-bottom: 20px;
+}
+
+.inner .table-cell .table-cell {
+  padding-bottom: 0px;
+}
+
+.picture{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    /*height: 800px;*/
+    /*border-right: dashed 20px #373737;*/
+}
+
+.clear {clear: both; }
+
+#me {
+    background-image: url(/me_gray.jpg);
+}
+
+#iceland {
+    background-image: url(/iceland.jpg);
+}
+
+#hugh {
+    background-image: url(/hugh.jpg);
+}
+
+#gc {
+    background-image: url(/gc.jpg);
+}
+
+.table {
+  display: table;
+  width: 100%;
+}
+
+.table-row {
+  display: table-row;
+  vertical-align: top;
+}
+
+.table-cell {
+  display: table-cell;
+  vertical-align: top;
+}
+
+
+
+.table-cell.left {
+  font-family: "Lato Heavy";
+  text-transform: uppercase;
+  line-height: 20px;
+  letter-spacing: -0.2px;
+  font-size: 20px;
+  width: 200px;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.gray {
+  color: #BABABA;
+  text-decoration: none;
+}
+
+.gray a, .gray a:visited {
+  color: #BABABA;
+}
+
+.grayer {
+  color: #878787;
+}
+
+.black a, .black a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+.black a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: "Lato Light";
+  letter-spacing: -3px;
+  font-size: 80px;
+  line-height: 80px;
+  margin: 20px 0px 10px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.title {
+  font-family: "Lato Regular";
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.blurb {
+  font-family: "Lato Light Italic";
+  font-size: 16px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.blurb:last-child {
+  margin-bottom: 0px;
+}
+
+.resume ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-family: "Lato Light";
+  margin-bottom: 16px;
+}
+
+.resume ul:last-child {
+  margin-bottom: 0px;
+}
+
+.resume li {
+  margin-bottom: 4px;
+}
+
+ul.contact {
+  padding: 0px;
+  list-style-type: none;
+}
+
+li.contact {
+
+}
+
+.ribbon {
+  text-transform: uppercase;
+  font-family: "Lato Light";
+  font-size: 12px;
+  background: #e43;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #FFF;
+  z-index: 5;
+  width: 100%;
+  background: #F05748;
+}
+
+.ribbon.corner {
+  width: 300px;
+  position: absolute;
+  top: 50px;
+  right: -75px;
+  left: auto;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.ribbon a {
+  color: #FFF;
+}
+
+.ribbon a:visited {
+  color: #FFF;
+}
+
+/* Custom styles */
+
+.ribbon.sticky{
+  position: fixed;
+}
+
+.ribbon.shadow{
+  box-shadow: 0 0 3px rgba(0,0,0,.3);
+}
+
+#print-message {
+  text-align: right;
+}
+
+@media print {
+  title {
+    display: none;
+  }
+
+  @page {
+    margin: 1.25cm .75cm 1.25cm .75cm;
+  }
+
+  .col1 {
+    display: none;
+  }
+
+  .col2 {
+    width: 100%;
+    box-shadow: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .col2 .inner {
+    padding-top: 0px;
+  }
+
+  .ribbon {
+    display: none;
+  }
+
+  h1 {
+    margin-top: 0px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .title {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 3px;
+  }
+
+  .blurb {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .table-cell.left {
+    font-size: 16px;
+    line-height: 16px;
+    width: 150px;
+  }
+
+  body, html {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .resume ul {
+    font-size: 14px;
+    line-height: 16px;
+    padding-right: 50px;
+  }
+
+  .resume li {
+    margin-bottom: 2px;
+    /*padding-right: 50px;*/
+  }
+
+  #references .table-cell {
+    -webkit-padding-before: 140px;
+  }
+
+  #print-message {
+    display: none;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+
+  
+
+  <div class="col1"></div>
+
+  <div class="col2">
+    <div class="inner">
+      <h1>Josh Lear</h1>
+      <ul class="contact">
+        <li><a href="mailto: jlear2013@my.fit.edu" target="_blank">jlear2013@my.fit.edu</a></li>
+        <li><a href="http://instagram.com/theoriginalbrogrammer" target="_blank">IG: @theoriginalbrogrammer</a></li>
+      </ul>
+      
+      <div class="table resume">
+ 	<div class="table-row">
+          <div class="table-cell left">
+            Education
+          </div>
+          <div class="table-cell">
+
+            <span class="title">Bachelor of Science in Software Engineering</span>
+            <br><span class="blurb">Expected May 2016, Florida Institute of Technology, Melbourne, FL</span>
+            <ul>
+              <li>GPA: 3.51</li>
+            </ul>
+
+          </div>
+        </div>
+	 <div class="table-row">
+          <div class="table-cell left">
+            Technologies &<br> Tools
+          </div>
+          <div class="table-cell">
+            <ul>
+              <li>Programming Languages: Java, C++, Haskell, Python, Bash</li>
+	      <li>Unit Testing Framework: JUnit (my JUnit instructional video series: part 1, part 2)</li>
+	      <li>ElasticSearch, Hadoop, Restful Web Services (Apache/HttpClient, Jersey), XML (JAXB), JSON (Jackson), OpenStack, SQL, Object-Oriented Design, Android Development, Parse</li>
+	      <li>Development Tools: Eclipse, NetBeans, BlueJ, IDEONE, ANT, Ivy, Subversion, Git, VI, SSH</li>
+	      <li>Operating Systems: Windows, Linux/Ubuntu, Ubuntu Server</li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell left">
+            Employment
+          </div>
+          <div class="table-cell">
+
+            <span class="title">Software Engineering Intern,  <a href="http://www.facebook.com"><img src="fblogo.jpg" alt="fblogo" align="middle"></a></span>
+            <br><span class="blurb">May 18, 2015 &mdash; August 8, 2015</span>
+            <ul>
+              <li>Interning at Facebook this Summer!</li>
+            </ul>
+
+            <span class="title">Software Engineering Intern, <a href="http://www.parsons.com"><img src="parsonslogo.jpg" alt="parsonslogo" align="middle"></a></span>
+            <br><span class="blurb">May 5, 2014 &mdash; August 8, 2014</span>
+            <ul>
+              <li> Developing software packages to communicate with Elasticsearch (ES) via its RESTful web services interface for indexing and searching using HttpClient and Jersey</li>
+	      <li>Developing command-line applications to ingest data of various formats into ES</li>
+	      <li>Integrating the system into the Hadoop platform to improve performance </li>
+            </ul>
+
+	    <span class="title">Research Assistant, Florida Institute of Technology</span>
+            <br><span class="blurb">September 21, 2014 &mdash; Present</span>
+            <ul>
+              <li>Performing updates and feature additions on a virtualization platform for network security over OpenStack</li>
+	      <li>Developing RESTful web services to support a virtualization platform for network security over OpenStack</li>
+	      <li>Creating network emulations for realistic penetration testing for stakeholders</li>
+	      <li>Developing Android Applications</li>
+            </ul>
+          </div>
+
+        </div>
+
+       
+
+        <div class="table-row">
+          <div class="table-cell left">
+            Competitive<br>Programming<br>Contests<BR>& Hackathons
+          </div>
+          <div class="table-cell">
+            <span class="title">Achievements</span>
+	      <li>2nd place (out of 80 teams) for the Intuit Innovation Challenge at HackDFW (hackathon), Feb. 28, 2015</li>
+	      <li>5th place (out of 60) in the Ulticoder National Programming Contest</li>
+	      <li>8th place (out of 100 teams) at the International Collegiate Programming Contest Southeast Regional </li>
+	      <li>15th place (out of 636) in the International Collegiate Programming Contest North American Qualifier</li>
+	      <li>2nd place (out of 12) at the Space Coast Qualifier September 27, 2013</li>
+	      <li>31st place (out of 100) at the International Collegiate Programming Contest (ICPC), Southeast Regional, November 2, 2013 (ACM competition)</li>
+          </div>
+        </div>
+	 <div class="table-row">
+          <div class="table-cell left">
+            Organizations
+          </div>
+          <div class="table-cell">
+            <span class="title">Association for Computing Machinery Local Chapter (ACM) 2013 - 2014 Member, 2014 - 2015 President</span>
+            <br><span class="blurb">2013 - 2014 Member, 2014 - 2015 President</span>
+	    <ul>
+	     <li>Increased weekly meeting attendance from ~10 to ~80</span>
+	     <li>Organized weekly practice programming contests through Tianjin University online judge.</li>
+	     <li>Organized bi-weekly “resume builders” where 80+ students learn basic CS skills not taught in school like Linux, Bash, and Version Control</li>
+            </ul>
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell left">
+            Social<br>
+            Networking
+          </div>
+          <div class="table-cell">
+           Linked In: https://www.linkedin.com/in/joshlearsoftwareengineer
+           <br>Twitter: http://twitter.com/akabrogrammer
+           <br>Facebook: http://www.facebook.com/jek584
+          </div>
+        </div>
+
+        <div id="print-message" class="table-row">
+          <div class="table-cell left">
+            &nbsp;
+          </div>
+          <div class="table-cell">
+           <br><div class="blurb">This site best printed in Google Chrome.</div>
+           <br>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="clear"></div>
+
+    <script type="text/javascript">
+    // Cop out. This *should* be done in CSS, but this turned out
+    // to be a quicker solution. 
+    var resizeImages = function() {
+      var col1 = $(".col1");
+      var pictures = $(".picture");
+
+      pictures.css("height", "");
+      col1.css("width", "");
+
+      if (col1.width() > 700) {
+        col1.width(700);
+      }
+
+      pictures.height(col1.outerHeight() / pictures.length)
+    };
+
+    // Same as above. I probably *should* have done this stuff in 
+    // CSS, but this seemed easier/quicker. 
+    var convertToMobile = function() {
+      var col1 = $(".col1");
+      var col2 = $(".col2");
+      
+      // Make it so the picture and the resume are stacked instead
+      // of side by side.
+      $("body").css("height", "auto");
+
+      col1.css({
+        width: "100%",
+        height: "300px",
+        position: "relative",
+        backgroundSize: "100%, auto"
+      });
+
+      col2.css("width", "100%");
+
+      // Display section headers as inline items rather than 
+      // cell elements. Make sure they span the avaialable width
+      // of the screen.
+      $(".left").css({
+        display: "block",
+        width: "100%"
+      });
+      $(".inner .table-row").css("display", "block");
+
+      // Remove <br> statements I added to control where lines broke.
+      $(".table-cell.left").find("br").css("display", "none");
+
+      $("h1").css({
+        "font-size": "44px",
+        "line-height": "58px",
+        "margin": "10px 0px 0px 0px"
+      });
+
+      // Make the ribbon displayed across the top of the page rather
+      // than the corner.
+      $(".ribbon").removeClass("corner");
+      $(".ribbon").css("font-family", "Lato Regular");
+
+      // Make the title tags more palatable and not so bold.
+      $(".title").css({
+        fontSize: "18px",
+        marginBottom: "2px"
+      });
+
+      // No need to show the print message since mobile users probably
+      // won't be printing.
+      $("#print-message").remove();
+    }
+
+    // Behave differently depending on whether the screen is 
+    // small to start with. Smaller than 700 generally means mobile.
+    $(document).on("ready", function() {
+      if ($(document.body).width() > 700) {
+        resizeImages();
+        $(window).on("load", resizeImages);
+        $(window).on("resize", resizeImages);
+      }
+      else {
+        convertToMobile();
+      }
+    });
+
+    /* Multi-browser way of removing the title of the page while
+     * printing. It doesn't remove the full header, but it at least
+     * looks a little better. */
+    $(document).on("ready", function() {
+      
+      // This method from here:
+      // http://tjvantoll.com/2012/06/15/detecting-print-requests-with-javascript/
+      // Doesn't appear to work in Chrome, which is why we specifically detect
+      // Chrome below and remove the title. 
+      var title = "";
+      var beforePrint = function() {
+        title = $("title").html();
+        $("title").html("&nbsp;");
+      };
+      var afterPrint = function() {
+        $("title").html(title);
+      };
+
+      if (window.matchMedia) {
+        var mediaQueryList = window.matchMedia('print');
+        mediaQueryList.addListener(function(mql) {
+          if (mql.matches) {
+            beforePrint();
+          } else {
+            afterPrint();
+          }
+        });
+      }
+
+      window.onbeforeprint = beforePrint;
+      window.onafterprint = afterPrint;
+
+      // Detect chrome and remove the title text.
+      var is_chrome = !!window.chrome;
+
+      if (is_chrome) {
+        beforePrint();
+      }
+    });
+    
+    </script>
+
+  </body>
+</html>
+
